@@ -1,37 +1,8 @@
 
 
 
-
-// var iso = new Isotope('.grid', {
-//   itemSelector: '.element-item',
-//   layoutMode: 'fitRows'
-// });
-
-
-
-
-
-// function someApi() {
-
-//   document.getElementById('pic').prepend(`<div class="portfolio-item">
-//               <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-fancybox="gallery">
-//                   <div class="hover-text">
-//                     <div class="overlay-caption">
-//                       <div class="overlay-content">
-//                         <h4>Project Name</h4>
-//                       </div>
-//                     </div>
-//                   </div>`)
-// };
-
-
-
-
-// document.getElementById('api').addEventListener("click", someApi);
-
-
 (function () {
-  //Closure Bitches:) Watch me work
+  //Closure Page Scroll Function 
   $('a.page-scroll').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -46,33 +17,7 @@
   });
 
 
-  // Portfolio isotope filter
-  $(window).on('load', function () {
-    var $container = $('.grid-items');
-    $container.isotope({
-      filter: '*',
-      animationOptions: {
-        duration: 750,
-        easing: 'linear',
-        queue: false
-      }
-    });
-    $('.cat a').click(function () {
-      $('.cat .active').removeClass('active');
-      $(this).addClass('active');
-      var selector = $(this).attr('data-filter');
-      $container.isotope({
-        filter: selector,
-        animationOptions: {
-          duration: 750,
-          easing: 'linear',
-          queue: false
-        }
-      });
-      return false;
-    });
 
-  });
   // Init fancyBox
   $().fancybox({
     selector: '.element-item:visible > a'

@@ -47,4 +47,4 @@
     $('.navbar').removeClass('d-none');
   })
 
-})(jQuery); // End of use strict
+})(jQuery3); // End of use strict
