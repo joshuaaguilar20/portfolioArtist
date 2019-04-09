@@ -19,19 +19,22 @@
 
 
   // Init fancyBox
-  $().fancybox({
-    selector: '.element-item:visible > a'
-  })
+ window.onload = function (e) {
+    $().fancybox({
+      selector: '.element-item:visible > a'
+    })
 
-  // Init Isotope
-  var $grid = $('.grid').isotope({
-    // options
-  });
+    // Init Isotope
+    var $grid = $('.grid').isotope({
+      // options
+    });
 
-  // Filter items on button click
-  $('.filter-button-group').on('click', 'button', function () {
-    $grid.isotope({ filter: $(this).attr('data-filter') });
-  });
+    // Filter items on button click
+    $('.filter-button-group').on('click', 'button', function () {
+      $grid.isotope({ filter: $(this).attr('data-filter') });
+    });
+
+  };
 
 
 
